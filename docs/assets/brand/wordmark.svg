@@ -1,0 +1,6 @@
+<svg width="900" height="220" viewBox="0 0 900 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="220" height="220" rx="50" fill="#181A1B"/>
+  <path d="M154 70C142 56 126 49 108 49C73 49 49 77 49 110C49 143 73 171 108 171C127 171 144 163 156 149" stroke="#E17B3B" stroke-width="23" stroke-linecap="round"/>
+  <circle cx="164" cy="61" r="10" fill="#74B18E"/>
+  <text x="270" y="137" fill="#181A1B" font-family="Inter, Arial, sans-serif" font-size="92" font-weight="750" letter-spacing="-4">Chronlyt</text>
+</svg>

@@ -1,0 +1,53 @@
+name: Bug report
+description: Report a reproducible Chronlyt problem without attaching personal data.
+title: "bug: "
+labels: [bug]
+body:
+  - type: input
+    id: version
+    attributes: { label: Chronlyt version, placeholder: "0.2.0" }
+    validations: { required: true }
+  - type: dropdown
+    id: os
+    attributes:
+      { label: Operating system, options: [Windows 10, Windows 11, Linux] }
+    validations: { required: true }
+  - type: input
+    id: linux
+    attributes:
+      {
+        label: Linux distribution and version,
+        description: Leave blank on Windows.,
+      }
+  - type: input
+    id: desktop
+    attributes:
+      {
+        label: Desktop environment and display protocol,
+        placeholder: "GNOME 48, Wayland / Windows desktop",
+      }
+  - type: dropdown
+    id: format
+    attributes:
+      {
+        label: Installation format,
+        options:
+          [NSIS installer, RPM, DEB, AppImage, Development build, Unknown],
+      }
+  - type: textarea
+    id: steps
+    attributes: { label: Steps to reproduce }
+    validations: { required: true }
+  - type: textarea
+    id: expected
+    attributes: { label: Expected behaviour }
+    validations: { required: true }
+  - type: textarea
+    id: actual
+    attributes: { label: Actual behaviour }
+    validations: { required: true }
+  - type: markdown
+    attributes:
+      {
+        value: "Do not attach your database, behavioural exports, API keys or unreviewed logs. About → Copy Diagnostics is designed to be privacy-safe.",
+      }
