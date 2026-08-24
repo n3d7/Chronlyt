@@ -237,3 +237,13 @@ This public repository contains product documentation, screenshots, release info
 Chronlyt is currently under active development and remains pre-stable.
 
 The latest `0.x` release represents the currently supported version.
+
+## Licensing
+
+Chronlyt is proprietary, closed-source software.
+
+This repository contains public documentation, release information,
+and project resources. It does not contain the Chronlyt application
+source code.
+
+Copyright © 2026 [copyright holder]. All rights reserved.

@@ -2,133 +2,674 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Chronlyt — Know where your time actually goes</title>
+
     <meta
       name="description"
-      content="Chronlyt — privacy-first desktop tracking for what actually happened."
+      content="Chronlyt is a privacy-first desktop application for tracking focus, activity, outcomes and weekly reflection."
     />
-    <title>Chronlyt — Know where your time actually goes</title>
+    <meta
+      name="keywords"
+      content="Chronlyt, productivity, time tracking, focus, activity tracking, privacy, local-first"
+    />
+    <meta name="author" content="Chronlyt" />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#11110f" />
+
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="Chronlyt — Know where your time actually goes"
+    />
+    <meta
+      property="og:description"
+      content="Privacy-first desktop tracking for focus, activity, outcomes and weekly reflection."
+    />
+    <meta property="og:image" content="assets/social-preview.png" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Chronlyt — Know where your time actually goes"
+    />
+    <meta
+      name="twitter:description"
+      content="Privacy-first desktop tracking for focus, activity, outcomes and weekly reflection."
+    />
+    <meta name="twitter:image" content="assets/social-preview.png" />
+
     <link rel="icon" href="assets/logo-mark.svg" />
     <link rel="stylesheet" href="styles.css" />
   </head>
+
   <body>
-    <header class="nav">
-      <a class="brand" href="#top"
-        ><img src="assets/logo-mark.svg" alt="" /><strong>Chronlyt</strong></a
-      >
-      <nav>
-        <a href="#features">Features</a><a href="#privacy">Privacy</a
-        ><a href="https://github.com/n3d7/Chronlyt/tree/main/docs/user">Docs</a
-        ><a href="https://github.com/n3d7/Chronlyt/releases">Releases</a>
-      </nav>
-    </header>
-    <main id="top">
-      <section class="hero">
-        <div>
-          <span class="eyebrow">LOCAL-FIRST DESKTOP TRACKING</span>
-          <h1>Know where your time <em>actually</em> goes.</h1>
-          <p>
-            Connect plans, focused work, activity and outcomes. Reflect on
-            reality without giving up ownership of your data.
-          </p>
-          <div class="actions">
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
+    <header class="site-header">
+      <div class="nav-shell">
+        <a class="brand" href="#top" aria-label="Chronlyt home">
+          <img src="assets/logo-mark.svg" alt="" />
+          <strong>Chronlyt</strong>
+        </a>
+
+        <nav class="desktop-nav" aria-label="Primary navigation">
+          <a href="#features">Features</a>
+          <a href="#workflow">How it works</a>
+          <a href="#privacy">Privacy</a>
+          <a href="#ai">AI</a>
+          <a href="#faq">FAQ</a>
+          <a
+            href="https://github.com/n3d7/Chronlyt/tree/main/docs/user"
+          >
+            Docs
+          </a>
+          <a href="https://github.com/n3d7/Chronlyt">GitHub</a>
+        </nav>
+
+        <a
+          class="nav-download"
+          href="https://github.com/n3d7/Chronlyt/releases/latest"
+        >
+          Download
+        </a>
+
+        <details class="mobile-menu">
+          <summary aria-label="Open navigation">Menu</summary>
+
+          <nav aria-label="Mobile navigation">
+            <a href="#features">Features</a>
+            <a href="#workflow">How it works</a>
+            <a href="#privacy">Privacy</a>
+            <a href="#ai">AI</a>
+            <a href="#faq">FAQ</a>
             <a
-              class="primary"
+              href="https://github.com/n3d7/Chronlyt/tree/main/docs/user"
+            >
+              Documentation
+            </a>
+            <a href="https://github.com/n3d7/Chronlyt">
+              GitHub
+            </a>
+            <a href="https://github.com/n3d7/Chronlyt/releases/latest">
+              Download
+            </a>
+          </nav>
+        </details>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <section id="top" class="hero">
+        <div class="hero-copy">
+          <span class="eyebrow">LOCAL-FIRST DESKTOP TRACKING</span>
+
+          <h1>
+            Know where your time
+            <em>actually</em>
+            goes.
+          </h1>
+
+          <p class="hero-description">
+            Connect plans, focused work, real activity and outcomes.
+            Understand what actually happened without giving up ownership
+            of your personal data.
+          </p>
+
+          <div class="hero-actions">
+            <a
+              class="button button-primary"
               href="https://github.com/n3d7/Chronlyt/releases/latest"
-              >Download Chronlyt</a
-            ><a href="https://github.com/n3d7/Chronlyt">View on GitHub</a>
+            >
+              Download Chronlyt
+            </a>
+
+            <a
+              class="button button-secondary"
+              href="https://github.com/n3d7/Chronlyt"
+            >
+              View on GitHub
+            </a>
           </div>
-          <small
-            >Windows 10/11 · Fedora · Debian/Ubuntu · AppImage · x86_64</small
-          >
-        </div>
-        <img
-          class="hero-shot"
-          src="assets/dashboard-dark.png"
-          alt="Chronlyt dashboard in dark mode"
-        />
-      </section>
-      <section id="features" class="grid">
-        <article>
-          <b>Track</b>
-          <h2>Plans meet reality</h2>
-          <p>
-            Tasks, Activities, Brain Dump, Goals and life categories in one
-            local timeline.
-          </p>
-        </article>
-        <article>
-          <b>Focus</b>
-          <h2>Work toward outcomes</h2>
-          <p>
-            Timestamp-backed Focus Sessions with pause recovery and honest
-            completion notes.
-          </p>
-        </article>
-        <article>
-          <b>Reflect</b>
-          <h2>Review the week</h2>
-          <p>
-            Plan vs Actual, analytics and Weekly Reviews make patterns visible.
-          </p>
-        </article>
-        <article>
-          <b>Improve</b>
-          <h2>Choose the next experiment</h2>
-          <p>
-            Use evidence without turning subjective scores into false precision.
-          </p>
-        </article>
-      </section>
-      <section id="privacy" class="privacy">
-        <span>PRIVACY BY DEFAULT</span>
-        <h2>Your behaviour is not our dataset.</h2>
-        <div>
-          <p>
-            <strong>Local SQLite.</strong> No account, developer telemetry,
-            analytics SDK or automatic upload.
-          </p>
-          <p>
-            <strong>AI optional.</strong> Choose provider, period and
-            categories; preview the exact payload before sending.
-          </p>
-          <p>
-            <strong>Export anywhere.</strong> Markdown and versioned JSON are
-            created offline, independently from AI.
+
+          <ul class="platform-list" aria-label="Supported platforms">
+            <li>Windows 10 / 11</li>
+            <li>Fedora</li>
+            <li>Debian / Ubuntu</li>
+            <li>AppImage</li>
+            <li>x86_64</li>
+          </ul>
+
+          <p class="release-note">
+            Chronlyt is currently pre-stable. Features and data formats may
+            change before version 1.0.
           </p>
         </div>
-        <a href="https://github.com/n3d7/Chronlyt/blob/main/PRIVACY.md"
-          >Read the privacy model →</a
+
+        <div class="hero-visual">
+          <img
+            class="hero-shot"
+            src="assets/dashboard-dark.png"
+            alt="Chronlyt dashboard showing productivity, activity and focus information"
+          />
+        </div>
+      </section>
+
+      <section id="features" class="section features-section">
+        <header class="section-heading">
+          <span class="eyebrow">BUILT AROUND REALITY</span>
+
+          <h2>
+            Planning matters.
+            <br />
+            What actually happened matters more.
+          </h2>
+
+          <p>
+            Chronlyt connects intentions with real activity so you can see
+            where your attention went, what was completed and what repeatedly
+            got in the way.
+          </p>
+        </header>
+
+        <div class="feature-grid">
+          <article class="feature-card">
+            <span class="feature-label">Track</span>
+
+            <h3>Plans meet reality</h3>
+
+            <p>
+              Keep Tasks, Activities, Brain Dump items, Goals and life
+              categories connected in one local system.
+            </p>
+          </article>
+
+          <article class="feature-card">
+            <span class="feature-label">Focus</span>
+
+            <h3>Work toward outcomes</h3>
+
+            <p>
+              Run focused work sessions with timestamps, pause recovery and
+              completion notes grounded in what actually happened.
+            </p>
+          </article>
+
+          <article class="feature-card">
+            <span class="feature-label">Reflect</span>
+
+            <h3>See patterns over time</h3>
+
+            <p>
+              Compare plans against reality using Analytics, Statistics and
+              Weekly Reviews instead of relying on memory.
+            </p>
+          </article>
+
+          <article class="feature-card">
+            <span class="feature-label">Improve</span>
+
+            <h3>Change based on evidence</h3>
+
+            <p>
+              Find recurring patterns, identify friction and choose what to
+              change next without turning subjective life data into fake
+              precision.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="workflow" class="section showcase-section">
+        <header class="section-heading">
+          <span class="eyebrow">ONE CONTINUOUS WORKFLOW</span>
+
+          <h2>
+            From intention to evidence.
+          </h2>
+
+          <p>
+            Chronlyt is designed around the full loop: decide what matters,
+            work on it, record what happened and use the result to improve
+            the next cycle.
+          </p>
+        </header>
+
+        <article class="showcase-row">
+          <div class="showcase-copy">
+            <span class="showcase-number">01</span>
+
+            <h3>Focus on an actual outcome</h3>
+
+            <p>
+              Start a Focus Session around something concrete, keep track of
+              interruptions and finish with a record of what was actually
+              produced.
+            </p>
+
+            <ul>
+              <li>Timestamp-backed sessions</li>
+              <li>Pause and recovery handling</li>
+              <li>Completion notes</li>
+              <li>Activity context</li>
+            </ul>
+          </div>
+
+          <div class="showcase-visual">
+            <img
+              src="assets/focus.png"
+              alt="Chronlyt Focus Session interface"
+              loading="lazy"
+            />
+          </div>
+        </article>
+
+        <article class="showcase-row showcase-row-reverse">
+          <div class="showcase-copy">
+            <span class="showcase-number">02</span>
+
+            <h3>Turn activity into something understandable</h3>
+
+            <p>
+              Analytics connects your sessions, tasks and activity history
+              so you can see where time went and how behaviour changes across
+              days and weeks.
+            </p>
+
+            <ul>
+              <li>Historical trends</li>
+              <li>Plan versus actual</li>
+              <li>Activity patterns</li>
+              <li>Long-term comparisons</li>
+            </ul>
+          </div>
+
+          <div class="showcase-visual">
+            <img
+              src="assets/analytics.png"
+              alt="Chronlyt Analytics interface"
+              loading="lazy"
+            />
+          </div>
+        </article>
+
+        <article class="showcase-row">
+          <div class="showcase-copy">
+            <span class="showcase-number">03</span>
+
+            <h3>Review instead of guessing</h3>
+
+            <p>
+              Weekly Reviews help turn a week of activity into a useful
+              reflection: what worked, what changed, what failed and what
+              should happen next.
+            </p>
+
+            <ul>
+              <li>Weekly reflection</li>
+              <li>Completed outcomes</li>
+              <li>Repeated friction</li>
+              <li>Next-week adjustments</li>
+            </ul>
+          </div>
+
+          <div class="showcase-visual">
+            <img
+              src="assets/weekly-review.png"
+              alt="Chronlyt Weekly Review interface"
+              loading="lazy"
+            />
+          </div>
+        </article>
+      </section>
+
+      <section id="privacy" class="section privacy-section">
+        <div class="privacy-heading">
+          <span class="eyebrow">PRIVACY BY DEFAULT</span>
+
+          <h2>
+            Your behaviour is not our dataset.
+          </h2>
+
+          <p>
+            Chronlyt is designed around local ownership instead of turning
+            personal productivity data into another cloud analytics stream.
+          </p>
+        </div>
+
+        <div class="privacy-grid">
+          <article>
+            <h3>Local-first storage</h3>
+
+            <p>
+              Core application data is stored locally in SQLite on your
+              device.
+            </p>
+          </article>
+
+          <article>
+            <h3>No developer telemetry</h3>
+
+            <p>
+              Chronlyt does not include developer analytics SDKs or automatic
+              behavioural-data uploads.
+            </p>
+          </article>
+
+          <article>
+            <h3>No account required</h3>
+
+            <p>
+              Core tracking, reflection, backup and export features work
+              without a Chronlyt account.
+            </p>
+          </article>
+
+          <article>
+            <h3>Offline exports</h3>
+
+            <p>
+              Export your own data locally without requiring an AI provider
+              or cloud service.
+            </p>
+          </article>
+        </div>
+
+        <a
+          class="text-link"
+          href="https://github.com/n3d7/Chronlyt/blob/main/PRIVACY.md"
         >
+          Read the full privacy model →
+        </a>
       </section>
-      <section class="download">
-        <h2>Download Chronlyt</h2>
-        <p>Choose the clearly named asset in the latest GitHub Release.</p>
-        <div class="actions">
-          <a href="https://github.com/n3d7/Chronlyt/releases/latest"
-            >Windows installer</a
-          ><a href="https://github.com/n3d7/Chronlyt/releases/latest">RPM</a
-          ><a href="https://github.com/n3d7/Chronlyt/releases/latest">DEB</a
-          ><a href="https://github.com/n3d7/Chronlyt/releases/latest"
-            >AppImage</a
+
+      <section id="ai" class="section ai-section">
+        <div class="ai-content">
+          <span class="eyebrow">OPTIONAL AI ANALYSIS</span>
+
+          <h2>
+            You decide what leaves your machine.
+          </h2>
+
+          <p>
+            AI Analysis is optional. You choose the provider, time period,
+            categories and level of detail before anything is sent.
+          </p>
+
+          <div class="ai-points">
+            <article>
+              <strong>Choose the data</strong>
+              <p>
+                Select which categories and period should be included.
+              </p>
+            </article>
+
+            <article>
+              <strong>Review first</strong>
+              <p>
+                Inspect the information included in the request before
+                submission.
+              </p>
+            </article>
+
+            <article>
+              <strong>Send explicitly</strong>
+              <p>
+                Nothing is submitted to an AI provider until you confirm it.
+              </p>
+            </article>
+          </div>
+
+          <a
+            class="text-link"
+            href="https://github.com/n3d7/Chronlyt/tree/main/docs/user"
           >
+            Read the AI Analysis documentation →
+          </a>
         </div>
-        <small
-          >The repository is currently private, so Releases require authorized
-          GitHub access. Windows packages are not yet
-          Authenticode-signed.</small
-        >
+
+        <div class="ai-visual">
+          <img
+            src="assets/ai-analysis.png"
+            alt="Chronlyt AI Analysis interface"
+            loading="lazy"
+          />
+        </div>
+      </section>
+
+      <section class="section ownership-section">
+        <header class="section-heading">
+          <span class="eyebrow">YOUR DATA, YOUR MACHINE</span>
+
+          <h2>
+            Useful software should not require surrendering ownership.
+          </h2>
+        </header>
+
+        <div class="ownership-grid">
+          <article>
+            <span>01</span>
+            <h3>Local database</h3>
+            <p>
+              Your core Chronlyt history is stored on your own device.
+            </p>
+          </article>
+
+          <article>
+            <span>02</span>
+            <h3>Local backups</h3>
+            <p>
+              Create backups that remain under your control.
+            </p>
+          </article>
+
+          <article>
+            <span>03</span>
+            <h3>Portable exports</h3>
+            <p>
+              Export information in open, readable formats such as Markdown
+              and JSON.
+            </p>
+          </article>
+
+          <article>
+            <span>04</span>
+            <h3>Optional network features</h3>
+            <p>
+              Network-dependent features are separated from the core local
+              workflow.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="faq" class="section faq-section">
+        <header class="section-heading">
+          <span class="eyebrow">FAQ</span>
+
+          <h2>
+            A few important answers.
+          </h2>
+        </header>
+
+        <div class="faq-list">
+          <details>
+            <summary>Does Chronlyt require an account?</summary>
+            <p>
+              No. Core Chronlyt functionality is designed to work without an
+              account. Accounts are optional and are used for supported
+              identity and future device-related features.
+            </p>
+          </details>
+
+          <details>
+            <summary>Does Chronlyt upload my activity automatically?</summary>
+            <p>
+              No. Behavioural and productivity data is stored locally by
+              default and is not automatically uploaded.
+            </p>
+          </details>
+
+          <details>
+            <summary>Does AI Analysis run automatically?</summary>
+            <p>
+              No. AI Analysis is optional and requires explicit configuration
+              and confirmation before a request is sent.
+            </p>
+          </details>
+
+          <details>
+            <summary>Where is my Chronlyt data stored?</summary>
+            <p>
+              Core application data is stored locally on your device using
+              SQLite. Exports and backups are also created locally.
+            </p>
+          </details>
+
+          <details>
+            <summary>Is Chronlyt open source?</summary>
+            <p>
+              No. Chronlyt is proprietary, closed-source software. This public
+              repository contains documentation, release information and
+              public project resources, not the application source code.
+            </p>
+          </details>
+
+          <details>
+            <summary>Can I export my data?</summary>
+            <p>
+              Yes. Chronlyt supports local export workflows designed to keep
+              your information portable and under your control.
+            </p>
+          </details>
+        </div>
+      </section>
+
+      <section id="download" class="section download-section">
+        <div class="download-card">
+          <span class="eyebrow">DOWNLOAD</span>
+
+          <h2>
+            Start using Chronlyt.
+          </h2>
+
+          <p>
+            Download the latest release for your platform from GitHub Releases.
+          </p>
+
+          <div class="download-actions">
+            <a
+              class="button button-primary"
+              href="https://github.com/n3d7/Chronlyt/releases/latest"
+            >
+              Download latest release
+            </a>
+
+            <a
+              class="button button-secondary"
+              href="https://github.com/n3d7/Chronlyt/releases"
+            >
+              View all releases
+            </a>
+          </div>
+
+          <div class="package-grid">
+            <article>
+              <strong>Windows</strong>
+              <span>Windows 10 / 11</span>
+              <small>Installer · x86_64</small>
+            </article>
+
+            <article>
+              <strong>Fedora</strong>
+              <span>RPM-based Linux</span>
+              <small>.rpm · x86_64</small>
+            </article>
+
+            <article>
+              <strong>Debian / Ubuntu</strong>
+              <span>Debian-based Linux</span>
+              <small>.deb · x86_64</small>
+            </article>
+
+            <article>
+              <strong>AppImage</strong>
+              <span>Generic Linux</span>
+              <small>.AppImage · x86_64</small>
+            </article>
+          </div>
+
+          <p class="download-note">
+            Windows packages may display a SmartScreen reputation warning
+            while releases are not Authenticode-signed.
+          </p>
+        </div>
       </section>
     </main>
-    <footer>
-      <span>Chronlyt · no analytics, cookies or tracking scripts</span>
-      <div>
-        <a href="https://github.com/n3d7/Chronlyt">GitHub</a
-        ><a href="https://github.com/n3d7/Chronlyt/tree/main/docs/user"
-          >Documentation</a
-        ><a href="https://github.com/n3d7/Chronlyt/blob/main/PRIVACY.md"
-          >Privacy</a
-        >
+
+    <footer class="site-footer">
+      <div class="footer-main">
+        <div class="footer-brand">
+          <a class="brand" href="#top">
+            <img src="assets/logo-mark.svg" alt="" />
+            <strong>Chronlyt</strong>
+          </a>
+
+          <p>
+            Know where your time actually goes.
+          </p>
+        </div>
+
+        <div class="footer-links">
+          <div>
+            <strong>Product</strong>
+            <a href="#features">Features</a>
+            <a href="#privacy">Privacy</a>
+            <a href="#ai">AI Analysis</a>
+            <a href="#download">Download</a>
+          </div>
+
+          <div>
+            <strong>Resources</strong>
+            <a
+              href="https://github.com/n3d7/Chronlyt/tree/main/docs/user"
+            >
+              Documentation
+            </a>
+            <a href="https://github.com/n3d7/Chronlyt/releases">
+              Releases
+            </a>
+            <a href="https://github.com/n3d7/Chronlyt">
+              GitHub
+            </a>
+            <a href="https://github.com/n3d7/Chronlyt/issues">
+              Issues
+            </a>
+          </div>
+
+          <div>
+            <strong>Legal</strong>
+            <a href="privacy.html">Privacy</a>
+            <a href="terms.html">Terms</a>
+            <a href="eula.html">EULA</a>
+            <a href="licenses.html">Open Source Licenses</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>
+          Chronlyt is proprietary, closed-source software.
+        </p>
+
+        <p>
+          No analytics, cookies or tracking scripts.
+        </p>
+
+        <p>
+          © 2026 Chronlyt. All rights reserved.
+        </p>
       </div>
     </footer>
   </body>
