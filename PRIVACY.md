@@ -1,124 +1,39 @@
 # Chronlyt Privacy
 
-Chronlyt is designed to make personal behavioural data useful to you without turning it into a developer dataset.
+Chronlyt is designed around local-first, privacy-conscious operation. It is also becoming a modular platform, so privacy must be understood at two levels: the Chronlyt base application and the plugins added to it.
 
-## Local-first by default
+## Scope
 
-Chronlyt stores your personal data locally on your device.
+This document describes the privacy direction and currently documented behavior of the Chronlyt base application. It does not make blanket promises for every plugin.
 
-This may include:
+Plugins can introduce their own data, storage, account, integration, or network requirements. Review the documentation and provenance of a plugin before using it. When plugin-specific information is available, it takes precedence for that plugin's behavior.
 
-* Tasks and Goals
-* Activities and Focus Sessions
-* Brain Dump items
-* Learning and content records
-* Exercise and sleep entries
-* Finance entries
-* Rules and reviews
-* Saved AI reports
-* Application settings
-* Network Activity history
+## Base application principles
 
-Core application data is stored locally in SQLite. Logs, exports and backups are also created locally.
+Chronlyt's core is designed to work locally and without turning personal application data into a developer dataset.
 
-## What Chronlyt sends automatically
+The base application does not include developer analytics, third-party analytics SDKs, or automatic crash-report uploads. It does not automatically upload local user data as a general synchronization service.
 
-Chronlyt does **not** automatically upload your behavioural data.
+Current releases store structured application data locally. Sensitive credentials used by supported core features are designed to remain in operating-system credential facilities rather than ordinary application data, logs, exports, or backups.
 
-Chronlyt does not include:
+## Network activity
 
-* developer analytics or telemetry;
-* third-party analytics SDKs;
-* automatic crash-report uploads;
-* automatic behavioural-data synchronization.
+Some Chronlyt operations can require network access, including update checks, account operations, configured integrations, or other functionality explicitly used by the user. Plugins may add different network behavior.
 
-Normal local tracking and productivity features do not require an account or an internet connection.
+The destination service processes information according to its own terms and privacy policy. Before enabling networked functionality, review what it sends, where it sends it, and whether that behavior is appropriate for you.
 
-## Optional network features
+## Releases and updates
 
-Some features use the network only when enabled or requested by the user.
+Chronlyt releases are distributed through [GitHub Releases](https://github.com/n3d7/Chronlyt/releases). Release packages may include signatures, checksums, and update metadata. Follow the verification guidance supplied with the release you install.
 
-### Updates
+## Your responsibility when adding plugins
 
-Chronlyt may check GitHub Releases for update information when update checking is enabled or manually requested.
+Adding a plugin changes what Chronlyt can do and may change what information it handles. Do not assume that a plugin inherits every privacy property of the base application unless its documentation says so.
 
-Downloading and installing an update requires user action and update packages are cryptographically verified before installation.
+Use plugins only when you trust their source or publisher and understand their requested data and network behavior.
 
-### AI Analysis
+## Source code and repositories
 
-AI Analysis is optional and disabled unless configured by the user.
+Chronlyt is a closed-source application. The public [n3d7/Chronlyt](https://github.com/n3d7/Chronlyt) repository contains documentation, release information, issue tracking, and other public project resources.
 
-Before sending data to an AI provider, you choose what period and categories to include and can review the data that will be submitted.
-
-The request is sent only after explicit user confirmation.
-
-The selected AI provider receives the information contained in that request and processes it according to that provider's own terms and privacy policy.
-
-### Optional account
-
-Chronlyt can be used without an account.
-
-If you choose to create or sign in to an account, Chronlyt may send the information necessary for authentication and device/session management to the Chronlyt account service.
-
-Google or Apple authentication may also communicate with the corresponding identity provider.
-
-Account operations do not include your Tasks, Activities, Focus Sessions, Goals, notes, finance records, reviews or local application database.
-
-An account does not automatically enable behavioural-data synchronization.
-
-## Network Activity
-
-Chronlyt maintains a local Network Activity journal so you can see when supported network operations occur.
-
-The journal may contain information such as:
-
-* operation type;
-* destination host;
-* status;
-* time;
-* relevant high-level category information.
-
-It is designed not to record API keys, authentication secrets or submitted payload contents.
-
-## Background Mode and Start at Login
-
-Running Chronlyt in the background or starting it automatically with your operating system does not itself enable additional data collection or network access.
-
-Background operation allows already-enabled local features such as Focus Sessions, Activity Check-ins and notifications to continue while the main window is closed.
-
-It does not automatically start AI Analysis or other optional data-sharing operations.
-
-## Exports and backups
-
-Data Export is generated locally and does not require an AI provider or cloud service.
-
-Backups may contain sensitive personal and behavioural information because they include application data.
-
-Authentication credentials and AI API keys are designed to remain in the operating system's secure credential storage and are excluded from normal exports and backups.
-
-You should protect exported files and backups appropriately, especially when they contain personal information.
-
-## Your control
-
-You can control or disable optional Chronlyt features including:
-
-* Background Mode
-* Start at Login
-* Activity Check-ins
-* automatic update checks
-* notifications
-* gamification
-* AI features
-
-You can also:
-
-* review and clear Network Activity;
-* choose which categories to export;
-* create local backups;
-* remove local Chronlyt data using the application's or operating system's available controls.
-
-## Source code
-
-Chronlyt is a closed-source application.
-
-The public `n3d7/Chronlyt` repository contains product documentation, release information and other public project resources. The application source code is maintained separately and is not published in that repository.
+Plugin development is organized separately in [n3d7/Chronlyt-Plugins](https://github.com/n3d7/Chronlyt-Plugins). The Chronlyt application source code is maintained separately and is not published in this repository.

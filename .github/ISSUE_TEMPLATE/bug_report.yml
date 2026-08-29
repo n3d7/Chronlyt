@@ -5,8 +5,15 @@ labels: [bug]
 body:
   - type: input
     id: version
-    attributes: { label: Chronlyt version, placeholder: "0.2.0" }
+    attributes: { label: Chronlyt version, placeholder: "0.x.y" }
     validations: { required: true }
+  - type: input
+    id: plugin
+    attributes:
+      {
+        label: Plugin and version,
+        description: Leave blank if the problem occurs without a plugin.,
+      }
   - type: dropdown
     id: os
     attributes:
@@ -49,5 +56,5 @@ body:
   - type: markdown
     attributes:
       {
-        value: "Do not attach your database, behavioural exports, API keys or unreviewed logs. About → Copy Diagnostics is designed to be privacy-safe.",
+        value: "Do not attach databases, private exports, credentials, API keys, tokens, or unreviewed logs.",
       }

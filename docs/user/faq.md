@@ -1,25 +1,31 @@
-# FAQ
+# Frequently asked questions
 
-## Does Chronlyt upload my activity?
+## What is Chronlyt?
 
-No. Only optional AI requests send the exact behavioural payload you preview and consent to. Creating an optional account sends identity/device metadata but does not upload Chronlyt history.
+Chronlyt is becoming a modular desktop platform. Chronlyt supplies the base application, while plugins determine what functionality it gains.
 
-## Do I need an AI API or Python?
+## What can Chronlyt do?
 
-No. AI is optional, and production packages bundle the analytics sidecar when used.
+That depends on the current Chronlyt release and the plugins available for it. Productivity, monitoring, automation, alerts, integrations, analytics, and utilities are examples of possible plugin directions, not a claim that all of them exist today.
 
-## Can I use ChatGPT manually?
+Check [n3d7/Chronlyt-Plugins](https://github.com/n3d7/Chronlyt-Plugins) for current plugin work.
 
-Yes. Export Markdown/JSON offline and upload it yourself.
+## Is the plugin system finished?
 
-## Does core Chronlyt work offline?
+No stable or complete plugin experience is claimed by this documentation. Chronlyt is pre-stable, and the platform direction, plugin workflow, and compatibility expectations are still evolving.
 
-Yes. Update checks, optional account operations and explicitly configured AI providers are the only network features. An offline/unavailable account service does not block local use.
+## Where are plugins developed?
 
-## Where is my data stored?
+Plugin development lives in the separate [Chronlyt Plugins repository](https://github.com/n3d7/Chronlyt-Plugins). This repository is the public home for the base Chronlyt project, documentation, releases, and issue tracking.
 
-In the operating system's standard per-application data directory resolved by Tauri. **About → Diagnostics** shows the logs path without guessing platform paths.
+## Is Chronlyt open source?
 
-## Can I back up everything?
+The Chronlyt application is proprietary and closed source. Its implementation is maintained separately from this public documentation and release repository. See individual plugin repositories or files for the information published about those plugins.
 
-Backups cover the local database and metadata. OS-stored AI keys and account session tokens are intentionally excluded and must be configured/restored separately.
+## What happened to the old productivity documentation?
+
+It was removed because it described Chronlyt as a fixed collection of built-in features. That is no longer the product direction.
+
+## Is Chronlyt stable?
+
+Not yet. Chronlyt remains pre-stable (`0.x`). Features, interfaces, packaging, data formats, and plugin behavior may change before `1.0`.

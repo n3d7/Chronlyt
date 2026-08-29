@@ -1,3 +1,5 @@
 # Privacy
 
-See the repository-level [PRIVACY.md](../../PRIVACY.md). In the app, **Settings → Privacy → Network Activity** shows only Chronlyt-initiated update, account and AI operations. It records metadata, never passwords, session tokens, API keys or behavioural payloads. Clear it at any time.
+Read the repository-level [Chronlyt Privacy document](../../PRIVACY.md).
+
+Chronlyt is moving toward a model in which plugins determine much of the application's functionality. A plugin may have data or network requirements that differ from the base application. Review the information published for each plugin before using it; this documentation does not assume that every plugin behaves like the core.

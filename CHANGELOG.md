@@ -2,11 +2,16 @@
 
 All notable Chronlyt changes are documented here. The project follows [Semantic Versioning](https://semver.org/).
 
+This file is a historical release record. Older entries describe the earlier fixed-feature productivity application and are not the current product definition. See the [README](README.md) for Chronlyt's plugin-based platform direction.
+
 ## [Unreleased]
 
 ### Added
 
 ### Changed
+
+- Repositioned the public project and documentation around Chronlyt as a modular desktop platform whose functionality comes from plugins.
+- Retired the old static website, screenshots and fixed-feature user guides.
 
 ### Fixed
 

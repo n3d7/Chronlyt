@@ -6,35 +6,29 @@ While Chronlyt is pre-stable, only the latest `0.x` release receives security fi
 
 ## Reporting a vulnerability
 
-If you believe you have found a security vulnerability in Chronlyt, please use GitHub's private vulnerability reporting feature:
+If you believe you have found a security vulnerability in Chronlyt, use GitHub's private vulnerability reporting feature:
 
 **Security → Report a vulnerability**
 
 Do not open a public issue containing:
 
-- vulnerability details that could enable exploitation;
-- credentials, tokens or API keys;
-- personal or behavioural data;
-- private logs or database contents.
+- details that could enable exploitation;
+- credentials, tokens, or API keys;
+- personal data;
+- private logs, databases, exports, or configuration files.
 
-Security reports will be reviewed as soon as reasonably possible.
+If you are unsure whether a problem belongs to the Chronlyt core or a plugin, report it privately and identify the plugin and version involved when possible.
 
-## Security model
+## Platform and plugin scope
 
-Chronlyt is designed around a local-first security model.
+Chronlyt is becoming a modular desktop platform. The base application and installed plugins can have different trust boundaries, data access, and network behavior.
 
-- Personal behavioural data is stored locally by default.
-- Chronlyt does not include developer telemetry or analytics SDKs.
-- Sensitive credentials such as AI API keys and account session tokens are stored using operating-system credential facilities.
-- Optional AI requests require explicit user configuration and consent.
-- Backups and exports do not intentionally include authentication secrets or API keys.
-- Application updates use cryptographic verification before installation.
-- Diagnostics are designed to exclude user content and credentials.
+The documented core security model includes local-first storage, operating-system credential facilities for supported sensitive credentials, and cryptographic verification for application updates. The base application does not include developer telemetry or third-party analytics SDKs.
 
-Because backups and exports may contain personal behavioural information, users should protect them appropriately and use encrypted storage where necessary.
+These statements do not automatically apply to every plugin. Review a plugin's documentation, provenance, dependencies, data handling, and network behavior before using it. No undocumented plugin sandbox, permission model, API guarantee, or compatibility boundary is implied here.
 
 ## Closed-source application
 
-The public `n3d7/Chronlyt` repository contains product documentation, release information and public project resources.
+The public [n3d7/Chronlyt](https://github.com/n3d7/Chronlyt) repository contains documentation, release information, issue tracking, and public project resources for the base application.
 
-The application source code is maintained separately and is not published in this repository.
+The Chronlyt application source code is maintained separately and is not published in this repository. Plugin development is organized in [n3d7/Chronlyt-Plugins](https://github.com/n3d7/Chronlyt-Plugins).

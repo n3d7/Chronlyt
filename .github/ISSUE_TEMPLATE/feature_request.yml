@@ -3,9 +3,18 @@ description: Suggest an improvement grounded in a user problem.
 title: "feat: "
 labels: [enhancement]
 body:
+  - type: dropdown
+    id: scope
+    attributes:
+      {
+        label: Scope,
+        description: Plugin ideas and plugin-specific work may belong in https://github.com/n3d7/Chronlyt-Plugins.,
+        options: [Chronlyt base application, Plugin or plugin system, Unsure],
+      }
+    validations: { required: true }
   - type: textarea
     id: problem
-    attributes: { label: Problem, description: What is difficult today? }
+    attributes: { label: Problem, description: "What is difficult today?" }
     validations: { required: true }
   - type: textarea
     id: behaviour

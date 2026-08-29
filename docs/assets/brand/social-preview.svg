@@ -4,6 +4,6 @@
   <path d="M194 137C186 128 176 124 164 124C141 124 126 142 126 163C126 184 141 202 164 202C176 202 187 197 195 188" stroke="#E17B3B" stroke-width="15" stroke-linecap="round"/>
   <circle cx="202" cy="131" r="7" fill="#74B18E"/>
   <text x="96" y="356" fill="#F4F0E7" font-family="Inter, Arial, sans-serif" font-size="102" font-weight="750" letter-spacing="-5">Chronlyt</text>
-  <text x="96" y="432" fill="#F39A56" font-family="Inter, Arial, sans-serif" font-size="40" font-weight="650">Know where your time actually goes.</text>
-  <text x="96" y="504" fill="#AAA397" font-family="Inter, Arial, sans-serif" font-size="27">Privacy-first · local-first · Windows + Linux</text>
+  <text x="96" y="432" fill="#F39A56" font-family="Inter, Arial, sans-serif" font-size="40" font-weight="650">One app. Shaped by plugins.</text>
+  <text x="96" y="504" fill="#AAA397" font-family="Inter, Arial, sans-serif" font-size="27">A modular desktop platform · Windows + Linux</text>
 </svg>
