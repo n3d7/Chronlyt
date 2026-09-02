@@ -1,21 +1,31 @@
 # Getting started
 
-Chronlyt is in a pre-stable transition toward a plugin-based desktop platform. Before installing it, read the latest [release notes](https://github.com/n3d7/Chronlyt/releases) so you know what the current build supports.
+Chronlyt gives you a focused local-first desktop workspace. Optional plugins can add the capabilities you want without making every feature part of the base application.
+
+Chronlyt is pre-stable (`0.x`), so begin with the release notes for the version you plan to install.
 
 ## Install Chronlyt
 
-Download a package from [GitHub Releases](https://github.com/n3d7/Chronlyt/releases). Releases may provide a Windows installer, RPM, DEB, or AppImage package.
+Download Chronlyt from [GitHub Releases](https://github.com/n3d7/Chronlyt/releases). A release may provide a Windows installer, RPM, DEB, or AppImage package.
 
-Package availability can vary by release. Use the instructions and verification information published with the release you download.
+Package availability varies by release. Follow the installation and verification information published with the asset you download.
 
-## Find plugins
+## Start with the base application
 
-Visit [n3d7/Chronlyt-Plugins](https://github.com/n3d7/Chronlyt-Plugins) for available plugin work and its current status.
+The base application is intentionally focused. It provides the trusted desktop foundation rather than permanently bundling every possible workflow.
 
-Plugin installation and compatibility are still evolving. Follow the instructions supplied with a plugin or release rather than assuming a common installation process that is not yet documented.
+Basic offline operation does not require an account or continuous network connection. Some explicit operations, such as update checks, account features, and plugin discovery, can use the network.
 
-## Know what is current
+## Add capabilities with plugins
 
-Examples such as productivity tools, monitoring, automation, alerts, integrations, analytics, and utilities describe possible directions for plugins. They are not a promise that those plugins already exist.
+Plugins let you shape Chronlyt around your own needs. Different combinations can create very different workspaces from the same base application.
 
-Use the plugin repository and Chronlyt release notes to verify current functionality.
+Read [How plugins shape Chronlyt](plugins.md), then visit [n3d7/Chronlyt-Plugins](https://github.com/n3d7/Chronlyt-Plugins) for the current ecosystem and compatibility information.
+
+The community registry is not yet fully open. Follow current project guidance rather than assuming every experimental plugin is available through Chronlyt.
+
+## Check what is available
+
+Ideas such as productivity workflows, monitoring, automation, alerts, integrations, analytics, and focused utilities describe what the plugin model can support. They are not a promise that those plugins already exist.
+
+Use the plugin repository and Chronlyt release notes as the sources for current functionality.

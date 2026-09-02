@@ -1,24 +1,36 @@
-# Plugins
+# How plugins shape Chronlyt
 
-Plugins are what turn the Chronlyt base application into a tool for a particular purpose.
+Plugins let you decide what belongs in your Chronlyt workspace.
 
-Chronlyt provides the shared desktop foundation. A plugin contributes a focused capability. Choosing a different set of plugins can therefore produce a very different application without requiring every feature to live permanently in the core.
+The base application stays focused. You add optional capabilities for the work you actually want to do, and leave out unrelated features. A different plugin combination can make another person's Chronlyt installation useful for a completely different purpose.
 
-Possible plugins could support productivity workflows, monitoring, automation, alerts, service integrations, analytics, or small desktop utilities. These examples explain the model; they do not claim that specific plugins are already implemented.
+For example, plugins could support productivity workflows, monitoring, automation, alerts, integrations, analytics, or focused desktop utilities. These examples describe the range of the model; they do not claim that each plugin is already published.
 
-## Plugin repository
+## Why use plugins?
 
-Plugin development is organized in [n3d7/Chronlyt-Plugins](https://github.com/n3d7/Chronlyt-Plugins).
+- Add only the tools you need.
+- Keep unrelated features out of your workspace.
+- Combine focused capabilities into your own workflow.
+- Change Chronlyt as your needs change.
 
-Use that repository to check:
+Plugins extend the trusted Chronlyt core rather than replacing it. The host remains responsible for plugin identity, permissions, validation, and access to core capabilities.
 
-- which plugins currently exist;
-- which ideas are only planned or experimental;
-- plugin-specific setup and usage instructions;
-- the compatibility information available for a plugin.
+## Choosing plugins carefully
 
-This documentation does not promise a stable plugin API, installation method, compatibility contract, or security boundary that has not been published by the project.
+Current v1 plugins run in a capability-limited WebAssembly environment. They do not receive direct arbitrary access to the filesystem, network, processes, shell, raw SQLite database, or application credentials. Packages are validated before execution and the runtime applies resource limits.
 
-## Choosing a plugin
+Those controls do not guarantee that every plugin is safe or useful. Consider the plugin's publisher, source, requested capabilities, data handling, release provenance, and maintenance status before installing it. See the [Security Policy](../../SECURITY.md) and [Privacy document](../../PRIVACY.md).
 
-Treat plugin code and plugin-provided instructions as separate from the Chronlyt core. Before using a plugin, review its source or provenance, documentation, data handling, network behavior, and current maintenance status when that information is available.
+## Current ecosystem status
+
+The public plugin foundation exists, but community registry intake is not yet fully open. Chronlyt does not currently claim a mature marketplace or a large plugin catalogue.
+
+Visit [n3d7/Chronlyt-Plugins](https://github.com/n3d7/Chronlyt-Plugins) for current compatibility information, public contracts, validation tooling, examples, and registry status.
+
+Plugin authors normally keep source code in their own repositories and publish their own release artifacts. The public ecosystem repository is the shared compatibility and registry foundation, not a monorepo containing every community plugin.
+
+## Project boundaries
+
+The Chronlyt application core is proprietary and closed-source. Public plugin contracts and ecosystem tooling are available through Chronlyt-Plugins so authors can build compatible plugins without access to the private core source.
+
+For practical contribution options, see [CONTRIBUTING.md](../../CONTRIBUTING.md).

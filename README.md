@@ -1,65 +1,83 @@
 # Chronlyt
 
-**One desktop application, shaped by the plugins you choose.**
+**A private, local-first desktop workspace that becomes the tool you want it to be.**
 
-Chronlyt is becoming a modular desktop platform: Chronlyt provides the base application, and plugins determine what it can do.
+Chronlyt starts with a focused base application. Add optional plugins for the tools and workflows that matter to you, and leave out the ones that do not.
 
-Instead of shipping every idea as a permanent built-in feature, Chronlyt is designed to let you add only the capabilities you need. Different plugin combinations can make the same base application useful for very different purposes.
+**Start with Chronlyt. Make it yours.**
 
-Plugin development lives in the **[Chronlyt Plugins repository](https://github.com/n3d7/Chronlyt-Plugins)**. Check that repository for available plugins, work in progress, and current plugin documentation.
+[Download](https://github.com/n3d7/Chronlyt/releases) · [Plugins](docs/user/plugins.md) · [Documentation](docs/user/README.md) · [Privacy](PRIVACY.md) · [Security](SECURITY.md) · [Contributing](CONTRIBUTING.md) · [Report a bug](https://github.com/n3d7/Chronlyt/issues/new?template=bug_report.yml)
 
-[Downloads](#downloads) · [Documentation](docs/user/README.md) · [Plugins](https://github.com/n3d7/Chronlyt-Plugins) · [Report a bug](https://github.com/n3d7/Chronlyt/issues/new?template=bug_report.yml)
+## Make Chronlyt yours
 
-## The idea
+Not everyone needs the same desktop app. Chronlyt is designed so that its core stays focused while you choose which additional capabilities belong in your workspace.
 
-Chronlyt provides a common desktop foundation. Plugins add the parts that make the application useful to you.
+One installation might support a productivity workflow. Another could be shaped around monitoring, automation, analytics, alerts, integrations, or a few focused desktop utilities. Those are examples of what plugins can make possible, not a claim that every such plugin is already published.
 
-A plugin could, for example, add a productivity workflow, system monitoring, automation, alerts, an external-service integration, analytics, or a focused utility. These are examples of what the platform direction can support—not a list of functionality that is already available.
+This approach lets you:
 
-This approach means:
+- install only the capabilities you actually want;
+- keep the base application focused;
+- combine plugins into a workspace that fits your needs;
+- change that workspace as your needs change.
 
-- you choose the functionality you actually want;
-- two Chronlyt installations can serve very different purposes;
-- new ideas can grow as separate plugins instead of turning the core into one large collection of unrelated features;
-- plugin work can evolve independently from the base application.
+Plugins extend Chronlyt; they do not replace its trusted core. The application remains responsible for plugin identity, permissions, validation, and the narrow capabilities made available to each plugin.
+
+## Local-first by design
+
+Chronlyt is built around local-first, privacy-conscious operation. Core structured data is stored locally by default, and the base application is designed to remain useful without an account or continuous network connection.
+
+Local-first does not mean that Chronlyt never uses the network. Update checks, account features, plugin discovery, and capabilities you explicitly choose may connect to external services. See [Privacy](PRIVACY.md) for the current boundaries.
+
+## A deliberately limited plugin model
+
+Chronlyt v1 plugins run as WebAssembly Components behind a host-controlled interface. They receive only approved capabilities and do not get direct APIs for arbitrary filesystem or network access, process execution, raw SQLite access, or application credentials.
+
+Packages and components are validated before execution, and the runtime applies resource limits. These controls reduce risk; they do not make every plugin inherently trustworthy. Consider a plugin's provenance and requested capabilities before installing it. See the [Security Policy](SECURITY.md) for more detail.
 
 ## Current status
 
-Chronlyt is under active development and remains pre-stable (`0.x`). The project is transitioning from its earlier fixed-feature application into the plugin-based platform described here.
+Chronlyt is pre-stable (`0.x`). The focused core and public plugin foundation exist, but interfaces and packaging may still change before `1.0`.
 
-The plugin experience, compatibility expectations, and available functionality are still evolving. Do not assume that an example on this page is implemented. Use the [Chronlyt Plugins repository](https://github.com/n3d7/Chronlyt-Plugins) and release notes as the sources for what is currently available.
+The community plugin registry is not yet fully open, and Chronlyt does not currently claim a mature marketplace or large catalogue. Check release notes and the public plugin repository for what is actually available.
 
-## Downloads
+## Download Chronlyt
 
-Published builds are available from [GitHub Releases](https://github.com/n3d7/Chronlyt/releases).
+Get current builds from [GitHub Releases](https://github.com/n3d7/Chronlyt/releases). Depending on the release, assets may include:
 
-Release assets may include:
+- Windows 10/11: NSIS installer;
+- Fedora and other RPM-based Linux distributions: RPM package;
+- Debian/Ubuntu: DEB package;
+- other Linux distributions: AppImage.
 
-- **Windows 10 / 11:** NSIS installer
-- **Fedora and other RPM-based Linux distributions:** RPM package
-- **Debian / Ubuntu:** DEB package
-- **Other Linux distributions:** AppImage
+Package availability can vary. Read the release notes and verification information before installing or updating.
 
-Because Chronlyt is pre-stable, interfaces, packaging, data formats, and plugin behavior may change before `1.0`. Read the release notes before updating.
+## Plugins and the public ecosystem
 
-## Documentation
+The public [Chronlyt-Plugins repository](https://github.com/n3d7/Chronlyt-Plugins) contains the shared plugin contracts, validation tooling, compatibility material, and registry work.
 
-Start with the [Chronlyt documentation](docs/user/README.md) for the platform concept, project status, releases, privacy, and frequently asked questions.
+Plugin authors normally keep their source code in their own repositories and publish their own release artifacts. Community registry intake is still evolving, so consult that repository before preparing a submission.
 
-The public documentation intentionally does not present the old built-in productivity feature set as the current product. Plugin-specific usage and development information belongs with the plugin work in [Chronlyt-Plugins](https://github.com/n3d7/Chronlyt-Plugins).
+For the user-facing overview, read [How plugins shape Chronlyt](docs/user/plugins.md).
 
-## Privacy and security
+## Contributing and support
 
-Local-first and privacy-conscious operation remain important project principles. The base application and individual plugins do not necessarily have identical data or network behavior, so review the documentation for any plugin you choose to use.
+The Chronlyt application core is proprietary and closed-source, but there are still useful ways to contribute: report bugs, improve public documentation, describe platform packaging problems, suggest improvements, or create plugins using the public ecosystem contracts.
 
-See the [Privacy document](PRIVACY.md) for the current scope and the [Security Policy](SECURITY.md) for responsible vulnerability reporting.
+Start with [CONTRIBUTING.md](CONTRIBUTING.md). Report security vulnerabilities privately as described in [SECURITY.md](SECURITY.md), not through a public issue.
 
-## Repository roles
+Useful links:
 
-This public repository contains Chronlyt project documentation, release information, issue tracking, and other public resources for the base application.
+- [User documentation](docs/user/README.md)
+- [Getting started](docs/user/getting-started.md)
+- [Changelog](CHANGELOG.md)
+- [Bug report](https://github.com/n3d7/Chronlyt/issues/new?template=bug_report.yml)
+- [Feature request](https://github.com/n3d7/Chronlyt/issues/new?template=feature_request.yml)
 
-The closed-source Chronlyt application implementation is maintained separately and is not published here. Plugin development is organized in [n3d7/Chronlyt-Plugins](https://github.com/n3d7/Chronlyt-Plugins).
+## Source availability and ownership
 
-## Licensing
+The Chronlyt application core is proprietary and closed-source. Its source is maintained separately and is not published in `n3d7/Chronlyt`; external contributors cannot submit core-source pull requests here.
 
-Chronlyt is proprietary, closed-source software. This repository contains public documentation and project resources; it does not contain the Chronlyt application source code.
+This repository is the public home for Chronlyt documentation, releases, issue tracking, and project information. The plugin ecosystem, public contracts, validators, and registry foundation are public in [n3d7/Chronlyt-Plugins](https://github.com/n3d7/Chronlyt-Plugins).
+
+Chronlyt is maintained by [n3d7](https://github.com/n3d7).

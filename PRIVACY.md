@@ -1,12 +1,12 @@
 # Chronlyt Privacy
 
-Chronlyt is designed around local-first, privacy-conscious operation. It is also becoming a modular platform, so privacy must be understood at two levels: the Chronlyt base application and the plugins added to it.
+Chronlyt is designed around local-first, privacy-conscious operation. Its focused base application can be extended with plugins, so privacy must be understood at two levels: the Chronlyt core and the capabilities added to a workspace.
 
 ## Scope
 
 This document describes the privacy direction and currently documented behavior of the Chronlyt base application. It does not make blanket promises for every plugin.
 
-Plugins can introduce their own data, storage, account, integration, or network requirements. Review the documentation and provenance of a plugin before using it. When plugin-specific information is available, it takes precedence for that plugin's behavior.
+Plugins can process data made available through their approved capabilities. Current v1 plugins do not receive arbitrary network, filesystem, process, raw SQLite, or credential access. Review a plugin's documentation, provenance, and requested capabilities before using it.
 
 ## Base application principles
 
@@ -18,7 +18,7 @@ Current releases store structured application data locally. Sensitive credential
 
 ## Network activity
 
-Some Chronlyt operations can require network access, including update checks, account operations, configured integrations, or other functionality explicitly used by the user. Plugins may add different network behavior.
+Some Chronlyt operations can require network access, including update checks, account operations, plugin discovery, configured integrations, or other functionality explicitly used by the user. Local-first does not mean that the application never connects to a network.
 
 The destination service processes information according to its own terms and privacy policy. Before enabling networked functionality, review what it sends, where it sends it, and whether that behavior is appropriate for you.
 
@@ -28,9 +28,9 @@ Chronlyt releases are distributed through [GitHub Releases](https://github.com/n
 
 ## Your responsibility when adding plugins
 
-Adding a plugin changes what Chronlyt can do and may change what information it handles. Do not assume that a plugin inherits every privacy property of the base application unless its documentation says so.
+Adding a plugin changes what Chronlyt can do and may change what information it handles through approved host capabilities. Do not assume that a plugin inherits every privacy property of the base application unless its documentation says so.
 
-Use plugins only when you trust their source or publisher and understand their requested data and network behavior.
+Use plugins only when you trust their source or publisher and understand their requested capabilities and data handling.
 
 ## Source code and repositories
 

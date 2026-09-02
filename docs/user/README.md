@@ -1,17 +1,22 @@
 # Chronlyt documentation
 
-Chronlyt is a base desktop application whose functionality comes from plugins. Installations can become very different tools depending on the plugins they use.
-
-Chronlyt is currently pre-stable and transitioning to this plugin-based model. Available plugins and the plugin workflow are still evolving, so check the [Chronlyt Plugins repository](https://github.com/n3d7/Chronlyt-Plugins) for current information.
+Chronlyt is a private, local-first desktop workspace with a focused base application and optional plugins. Start with the core, then add only the tools and workflows that make Chronlyt useful to you.
 
 ## Start here
 
-- [Getting started](getting-started.md)
+- [Install Chronlyt](getting-started.md)
 - [How plugins shape Chronlyt](plugins.md)
 - [Updates and releases](updates.md)
 - [Privacy](privacy.md)
 - [Frequently asked questions](faq.md)
 - [Security policy](../../SECURITY.md)
+- [Contributing](../../CONTRIBUTING.md)
 - [Changelog](../../CHANGELOG.md)
 
-The previous feature-by-feature guides have been removed because they described an earlier fixed productivity application, not the new Chronlyt platform direction.
+## What to expect
+
+Chronlyt is currently pre-stable (`0.x`). The focused core and public plugin foundation exist, while plugin availability and some workflows are still evolving.
+
+Use [GitHub Releases](https://github.com/n3d7/Chronlyt/releases) for current builds and release notes. Use [Chronlyt-Plugins](https://github.com/n3d7/Chronlyt-Plugins) for the public contracts, compatibility information, validation tooling, and registry status.
+
+Older feature-by-feature guides were removed because they described Chronlyt's previous fixed productivity feature set rather than the current product direction.
