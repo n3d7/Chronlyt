@@ -1,6 +1,6 @@
 # Chronlyt
 
-##   Work in progress
+**    Work in progress **
 
 **A private, local-first desktop workspace that becomes the tool you want it to be.**
 
