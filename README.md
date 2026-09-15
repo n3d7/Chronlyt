@@ -1,5 +1,7 @@
 # Chronlyt
 
+##   Work in progress
+
 **A private, local-first desktop workspace that becomes the tool you want it to be.**
 
 Chronlyt starts with a focused base application. Add optional plugins for the tools and workflows that matter to you, and leave out the ones that do not.
